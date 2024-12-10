@@ -251,6 +251,7 @@
           }
         ],
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -672,6 +673,7 @@
           }
         ],
         "requestBody": {
+          "required": true,
           "$ref": "#/components/requestBodies/patch_request"
         },
         "security": [
@@ -1016,6 +1018,7 @@
           }
         ],
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -1309,6 +1312,7 @@
           }
         ],
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -1587,6 +1591,7 @@
           }
         ],
         "requestBody": {
+          "required": true,
           "$ref": "#/components/requestBodies/patch_request"
         },
         "security": [
@@ -1779,6 +1784,7 @@
           }
         ],
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -1948,6 +1954,7 @@
           }
         ],
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -2089,6 +2096,7 @@
           }
         ],
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -2230,6 +2238,7 @@
           }
         ],
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -2384,6 +2393,7 @@
           }
         ],
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -4117,7 +4127,8 @@
         "description": "An array of JSON patch objects to apply partial updates to resources.",
         "items": {
           "$ref": "#/components/schemas/patch"
-        }
+        },
+        "minItems": 1
       },
       "plans.patch-400": {
         "properties": {

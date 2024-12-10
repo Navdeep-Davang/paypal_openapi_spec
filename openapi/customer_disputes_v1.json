@@ -26,7 +26,7 @@
       "description": "Use the `/disputes` resource with a dispute ID and an action to:<ul><li>Accept a claim.</li><li>Accept an offer to resolve a dispute.</li><li>Acknowledge the return of an item related to a dispute.</li><li>Settle a dispute.</li><li>Appeal a dispute.</li><li>Cancel a dispute.</li><li>Change the reason for a dispute.</li><li>Deny an offer to resolve dispute.</li><li>Escalate a dispute to a claim.</li><li>Make an offer to resolve a dispute.</li><li>Make an offer to resolve a dispute.</li><li>Provide evidence for a dispute.</li><li>Provide supporting information for dispute.</li><li>In the sandbox, update the dispute status.</li><li>Send a message about a dispute to the other party in the dispute.</li><ul>"
     },
     {
-      "name": "referred-disputes",
+      "name": "customer-referred-disputes",
       "description": "Use the `/customer/referred-disputes` resource to create a dispute for a referred case that was created by a partner or marketplace, show details for a referred dispute, by ID, notify referred refunds completed to PayPal, notify PayPal about referred dispute adjudication updates, and determine the dispute eligibility for referred disputes."
     },
     {
@@ -308,17 +308,17 @@
             },
             "multipart/related": {
               "schema": {
-                "$ref": "#/components/schemas/patch_request"
+                "$ref": "#/components/schemas/multipart_patch_request"
               }
             },
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/patch_request"
+                "$ref": "#/components/schemas/multipart_patch_request"
               }
             },
             "multipart/mixed": {
               "schema": {
-                "$ref": "#/components/schemas/patch_request"
+                "$ref": "#/components/schemas/multipart_patch_request"
               }
             }
           }
@@ -3420,7 +3420,7 @@
               "UPS",
               "USPS",
               "FEDEX",
-              "AIRBORNE_EXPRESS",
+              "AIRBORNE_EXPRESS",       
               "DHL",
               "AIRSURE",
               "ROYAL_MAIL",
@@ -3854,7 +3854,6 @@
               "DHL_DEUTSCHE_POST",
               "DHL_FR",
               "DHL_GLOBAL_ECOMMERCE",
-              "DHL_HK",
               "DHL_IT",
               "DHL_JP",
               "DHL_NL",
@@ -4153,7 +4152,6 @@
               "JANCO",
               "XPRESSEN_DK",
               "YTO",
-              "RPD2MAN",
               "SEUR_SP_API",
               "DELIVERYONTIME",
               "WISE_EXPRESS",
@@ -4462,7 +4460,6 @@
               "SHIPTOR",
               "CDEK",
               "VNM_VIETTELPOST",
-              "PHL_AIR21",
               "PALLET_NETWORK",
               "CJ_CENTURY",
               "UK_XDP",
@@ -4502,7 +4499,6 @@
               "JOOM_LOGIS",
               "STRECK_TRANSPORT",
               "HCT_LOGISTICS",
-              "ZA_FASTWAY",
               "CARRY_FLAP",
               "PONY_EXPRESS",
               "US_OLD_DOMINION",
@@ -5373,6 +5369,21 @@
         "items": {
           "$ref": "#/components/schemas/patch"
         }
+      },
+      "multipart_patch_request": {
+        "type": "object",
+        "title": "Multipart Patch Request",
+        "description": "An object-based schema compatible with multipart types.",
+        "properties": {
+          "patches": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/patch"
+            },
+            "description": "The JSON patch operations to apply as part of multipart payloads."
+          }
+        },
+        "required": ["patches"]
       },
       "subsequent_action": {
         "title": "Subsequent Action",
