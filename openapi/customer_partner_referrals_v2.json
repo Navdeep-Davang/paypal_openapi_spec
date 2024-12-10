@@ -501,12 +501,8 @@
         "security": [
           {
             "Oauth2": [
+              "https://uri.paypal.com/services/customer/partner-referrals",
               "https://uri.paypal.com/services/customer/partner-referrals/readwrite"
-            ]
-          },
-          {
-            "Oauth2": [
-              "https://uri.paypal.com/services/customer/partner-referrals"
             ]
           }
         ],

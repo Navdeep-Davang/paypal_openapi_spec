@@ -133,26 +133,10 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/disputes/read-buyer"
-            ]
-          },
-          {
-            "Oauth2": [
-              "https://uri.paypal.com/services/disputes/read-seller"
-            ]
-          },
-          {
-            "Oauth2": [
-              "https://uri.paypal.com/services/disputes/read-ebay"
-            ]
-          },
-          {
-            "Oauth2": [
-              "https://uri.paypal.com/services/disputes/read"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/disputes/read-buyer",
+              "https://uri.paypal.com/services/disputes/read-seller",
+              "https://uri.paypal.com/services/disputes/read-ebay",
+              "https://uri.paypal.com/services/disputes/read",
               "https://uri.paypal.com/services/disputes/read-partner"
             ]
           }
@@ -207,26 +191,10 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/disputes/read-buyer"
-            ]
-          },
-          {
-            "Oauth2": [
-              "https://uri.paypal.com/services/disputes/read-seller"
-            ]
-          },
-          {
-            "Oauth2": [
-              "https://uri.paypal.com/services/disputes/read-ebay"
-            ]
-          },
-          {
-            "Oauth2": [
-              "https://uri.paypal.com/services/disputes/read"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/disputes/read-buyer",
+              "https://uri.paypal.com/services/disputes/read-seller",
+              "https://uri.paypal.com/services/disputes/read-ebay",
+              "https://uri.paypal.com/services/disputes/read",
               "https://uri.paypal.com/services/disputes/read-partner"
             ]
           }
@@ -383,16 +351,8 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/disputes/update-seller"
-            ]
-          },
-          {
-            "Oauth2": [
-              "https://uri.paypal.com/services/disputes/update-buyer"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/disputes/update-seller",
+              "https://uri.paypal.com/services/disputes/update-buyer",
               "https://uri.paypal.com/services/disputes/update-partner"
             ]
           }
@@ -450,14 +410,10 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/disputes/update-seller"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/disputes/update-seller",
               "https://uri.paypal.com/services/disputes/update-buyer"
             ]
-          }
+          }        
         ],
         "tags": [
           "disputes-actions"
@@ -630,12 +586,8 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/disputes/update-seller"
-            ]
-          },
-          {
-            "Oauth2": [
-              "https://uri.paypal.com/services/disputes/update-buyer"
+              "https://uri.paypal.com/services/disputes/update-seller",
+               "https://uri.paypal.com/services/disputes/update-buyer"
             ]
           }
         ],
@@ -741,11 +693,7 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/disputes/update-seller"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/disputes/update-seller",
               "https://uri.paypal.com/services/disputes/update-buyer"
             ]
           }
@@ -851,11 +799,7 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/disputes/update-seller"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/disputes/update-seller",
               "https://uri.paypal.com/services/disputes/update-buyer"
             ]
           }
@@ -946,11 +890,7 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/disputes/update-seller"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/disputes/update-seller",
               "https://uri.paypal.com/services/disputes/update-buyer"
             ]
           }
@@ -1061,11 +1001,7 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/disputes/update-seller"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/disputes/update-seller",
               "https://uri.paypal.com/services/disputes/update-buyer"
             ]
           }
@@ -5363,12 +5299,17 @@
         ]
       },
       "patch_request": {
-        "type": "array",
-        "title": "Patch Request",
-        "description": "An array of JSON patch objects to apply partial updates to resources.",
-        "items": {
-          "$ref": "#/components/schemas/patch"
+        "type": "object",
+      "properties": {
+        "patch_request": {
+          "type": "array",
+          "description": "An array of JSON patch objects to apply partial updates to resources.",
+          "items": {
+            "$ref": "#/components/schemas/patch"
+          }
         }
+      },
+      "required": ["patch_request"]
       },
       "multipart_patch_request": {
         "type": "object",

@@ -84,11 +84,7 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/payments/payment"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/payments/payment",
               "https://uri.paypal.com/services/payments/realtimepayment"
             ]
           }
@@ -136,11 +132,7 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/payments/payment"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/payments/payment",
               "https://uri.paypal.com/services/payments/realtimepayment"
             ]
           }
@@ -191,11 +183,7 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/payments/payment"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/payments/payment",
               "https://uri.paypal.com/services/payments/realtimepayment"
             ]
           }
@@ -265,11 +253,7 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/payments/payment"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/payments/payment",
               "https://uri.paypal.com/services/payments/realtimepayment"
             ]
           }
@@ -322,11 +306,7 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/payments/payment"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/payments/payment",
               "https://uri.paypal.com/services/payments/realtimepayment"
             ]
           }
@@ -372,11 +352,7 @@
         "security": [
           {
             "Oauth2": [
-              "https://uri.paypal.com/services/payments/payment"
-            ]
-          },
-          {
-            "Oauth2": [
+              "https://uri.paypal.com/services/payments/payment",
               "https://uri.paypal.com/services/payments/realtimepayment"
             ]
           }
